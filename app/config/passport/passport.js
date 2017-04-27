@@ -18,7 +18,7 @@ module.exports = function(passport, user) {
  
             passwordField: 'password',
  
-            passReqToCallback: true // allows us to pass back the entire request to the callback
+            passReqToCallback: true 
  
         },
  
@@ -120,13 +120,13 @@ passport.use('local-signin', new LocalStrategy(
  
     {
  
-        // by default, local strategy uses username and password, we will override with email
+        
  
         usernameField: 'email',
  
         passwordField: 'password',
  
-        passReqToCallback: true // allows us to pass back the entire request to the callback
+        passReqToCallback: true 
  
     },
  
@@ -173,7 +173,7 @@ passport.use('local-signin', new LocalStrategy(
             console.log("Error:", err);
  
             return done(null, false, {
-                message: 'Something went wrong with your Signin'
+                message: 'Something went wrong with your login'
             });
  
         });
